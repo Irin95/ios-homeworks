@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProfileViewController.swift
 //  Navigation
 //
 //  Created by
@@ -7,18 +7,22 @@
 
 import UIKit
 
-
-class ViewController: UIViewController {
+class ProfileViewController: UIViewController {
     
     private lazy var actionButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Перейти", for: .normal)
+        button.setTitle("Просмотр профиля", for: .normal)
+        button.setTitleColor(.black, for: .normal)
         
         return button
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Профиль"
+        view.backgroundColor = .systemGray
         
         view.addSubview(actionButton)
         
@@ -32,31 +36,16 @@ class ViewController: UIViewController {
                 equalTo: safeAreaLayoutGuide.trailingAnchor,
                 constant: -20.0
             ),
-            actionButton.centerYAnchor.constraint(
-                equalTo: safeAreaLayoutGuide.centerYAnchor),
+            actionButton.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
             actionButton.heightAnchor.constraint(equalToConstant: 44.0)
         ])
         
-        actionButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        actionButton.addTarget(self, action: #selector(buttonPressed(_:)),
+                               for: .touchUpInside)
     }
     
     @objc func buttonPressed(_ sender: UIButton) {
-        let profileViewController = FeedViewController()
+        dismiss(animated: true)
         
-        profileViewController.modalTransitionStyle = .coverVertical
-        profileViewController.modalPresentationStyle = .fullScreen
-        
-        present(profileViewController, animated: true)
     }
 }
-
-
-//    override func viewWillAppear(_ animated: Bool) {
-//          super.viewWillAppear(animated)
-//        }
-
-//      }
-
-// тест 2
-// тест 3
-
