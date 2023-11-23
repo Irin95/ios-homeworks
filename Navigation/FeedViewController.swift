@@ -1,24 +1,34 @@
 //
-//  ViewController.swift
+//  FeedViewController.swift
 //  Navigation
 //
-//  Created by
+//  Created by Павел Пушкин on 05.07.2023.
 //
+
 
 import UIKit
 
-
-class ViewController: UIViewController {
+class FeedViewController: UIViewController {
+    
+    
+    var post = Post(titel: "мой первый пост")
+    
     
     private lazy var actionButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Перейти", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        
         
         return button
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Лента"
+        view.backgroundColor = .systemGray
         
         view.addSubview(actionButton)
         
@@ -32,8 +42,7 @@ class ViewController: UIViewController {
                 equalTo: safeAreaLayoutGuide.trailingAnchor,
                 constant: -20.0
             ),
-            actionButton.centerYAnchor.constraint(
-                equalTo: safeAreaLayoutGuide.centerYAnchor),
+            actionButton.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
             actionButton.heightAnchor.constraint(equalToConstant: 44.0)
         ])
         
@@ -41,22 +50,17 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonPressed(_ sender: UIButton) {
-        let profileViewController = FeedViewController()
+        dismiss(animated: true)
+        let postViewController = PostViewController()
+        postViewController.post = self.post
         
-        profileViewController.modalTransitionStyle = .coverVertical
-        profileViewController.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(postViewController, animated: true)
         
-        present(profileViewController, animated: true)
+//        postViewController.modalTransitionStyle = .coverVertical
+//        postViewController.modalPresentationStyle = .pageSheet
+//        present(postViewController, animated: true)
+        
     }
 }
 
-
-//    override func viewWillAppear(_ animated: Bool) {
-//          super.viewWillAppear(animated)
-//        }
-
-//      }
-
-// тест 2
-// тест 3
 
