@@ -2,7 +2,7 @@
 //  InfoViewController.swift
 //  Navigation
 //
-//  Created by Павел Пушкин on 06.07.2023.
+//  Created by Irina Bashkova on 06.07.2023.
 //
 
 import UIKit
@@ -14,10 +14,11 @@ class InfoViewController: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Alert", for: .normal)
-        button.layer.borderColor = UIColor.cyan.cgColor
-        button.layer.borderWidth = 2
+     
+        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderWidth = 1
         button.layer.cornerRadius = 5
-        button.backgroundColor = .brown
+        button.backgroundColor = .systemOrange
         button.addTarget(self, action: #selector(tapBarButton), for: .touchUpInside)
         return button
     }()
@@ -25,7 +26,7 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .systemMint
         layout()
     }
     
@@ -53,7 +54,7 @@ class InfoViewController: UIViewController {
         NSLayoutConstraint.activate([
             button.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-            button.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height / 2),
+            button.heightAnchor.constraint(equalToConstant: 50),    //UIScreen.main.bounds.height / 8
             button.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width / 2)
         ])
         

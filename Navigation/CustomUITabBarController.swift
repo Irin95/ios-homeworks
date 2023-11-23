@@ -2,7 +2,7 @@
 //  CustomUITabBarController.swift
 //  Navigation
 //
-//  Created by Данил Менделев on 09.07.2023.
+//  Created by Irina Bashkova on 09.07.2023.
 //
 
 import UIKit
@@ -15,7 +15,7 @@ class CustomUITabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
-//        setTabBarAppearance()
+    // setTabBarAppearance()   // банер таббара
     }
     
     private func setupTabBar() {
@@ -23,11 +23,11 @@ class CustomUITabBarController: UITabBarController {
         feedVC.view.backgroundColor = .white
         
         profileVC.title = "Профиль"
-        profileVC.view.backgroundColor = .white
+        profileVC.view.backgroundColor = .lightGray
         
-        feedVC.tabBarItem = UITabBarItem(title: "Лента", image: UIImage(systemName: "person.circle.fill"), tag: 0)
+        feedVC.tabBarItem = UITabBarItem(title: "Лента", image: UIImage(systemName: "bubble.right.circle"), tag: 0)
         //UITabBarItem(tabBarSystemItem:.featured, tag: 0)
-        profileVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(named: "profile"), tag: 1)
+        profileVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.crop.circle"), tag: 1)
         
         let navigationFeed = UINavigationController(rootViewController: feedVC)
         let navigationProfile = UINavigationController(rootViewController: profileVC)
