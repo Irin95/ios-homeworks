@@ -11,6 +11,7 @@ class CustomUITabBarController: UITabBarController {
 
     let feedVC = FeedViewController()
     let profileVC = ProfileViewController()
+    let loginVC = LogInViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +33,14 @@ class CustomUITabBarController: UITabBarController {
         
         feedVC.title = "Лента"
         feedVC.view.backgroundColor = .white
-        profileVC.view.backgroundColor = .lightGray
+        loginVC.view.backgroundColor = .lightGray
         
         feedVC.tabBarItem = UITabBarItem(title: "Лента", image: UIImage(systemName: "bubble.right.circle"), tag: 0)
-        profileVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.crop.circle"), tag: 1)
+        loginVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.crop.circle"), tag: 1)
+        // profileVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.crop.circle"), tag: 1)
         
         let navigationFeed = UINavigationController(rootViewController: feedVC)
-        let navigationProfile = UINavigationController(rootViewController: profileVC)
+        let navigationProfile = UINavigationController(rootViewController: loginVC)
         
         self.viewControllers = [navigationFeed, navigationProfile]
     }
