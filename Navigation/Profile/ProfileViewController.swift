@@ -5,6 +5,8 @@
 //  Created by Irina Bashkova
 //
 
+
+
 import UIKit
 
 class ProfileViewController: UIViewController {
@@ -20,7 +22,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(profileTableView)
-        
+        view.backgroundColor = .white
         setupConstraints()
         tuneTableView()
         

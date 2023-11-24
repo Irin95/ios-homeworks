@@ -33,7 +33,7 @@ import UIKit
      private lazy var postImageView: UIImageView = {
          let imageView = UIImageView()
          imageView.translatesAutoresizingMaskIntoConstraints = false
-         imageView.backgroundColor = .black
+         imageView.backgroundColor = .white
          imageView.contentMode = .scaleAspectFit
          return imageView
      }()
