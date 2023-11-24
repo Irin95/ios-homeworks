@@ -2,7 +2,7 @@
 //  FeedViewController.swift
 //  Navigation
 //
-//  Created by Павел Пушкин on 05.07.2023.
+//  Created by Irina Bashkova on 05.07.2023.
 //
 
 
