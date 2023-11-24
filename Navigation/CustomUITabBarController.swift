@@ -33,7 +33,7 @@ class CustomUITabBarController: UITabBarController {
         
         feedVC.title = "Лента"
         feedVC.view.backgroundColor = .white
-        loginVC.view.backgroundColor = .lightGray
+        
         
         feedVC.tabBarItem = UITabBarItem(title: "Лента", image: UIImage(systemName: "bubble.right.circle"), tag: 0)
         loginVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.crop.circle"), tag: 1)

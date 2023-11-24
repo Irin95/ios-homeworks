@@ -2,7 +2,7 @@
 //  LogInViewController.swift
 //  Navigation
 //
-//  Created by Павел Пушкин on 23.11.2023.
+//  Created by Created by Irina Bashkova
 //
 
 import UIKit

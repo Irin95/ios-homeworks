@@ -2,7 +2,7 @@
 //  ProfileHeaderView.swift
 //  Navigation
 //
-//
+//Created by Irina Bashkova
 
 import UIKit
 
