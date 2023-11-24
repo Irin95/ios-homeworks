@@ -61,6 +61,7 @@
 				5D1A43792A55F64900010CF8 /* ProfileViewController.swift */,
 				0E471EE82A656E94004EA25D /* ProfileHeaderView.swift */,
 				5DD445832B0FD35200B8EC03 /* LogInViewController.swift */,
+				5DB0DD142B10D62C00EF994B /* PostTableViewCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -86,7 +87,6 @@
 			children = (
 				0E471EE72A656CFD004EA25D /* Profile */,
 				5DE2F0862A51D630003A5EC8 /* AppDelegate.swift */,
-				5DB0DD142B10D62C00EF994B /* PostTableViewCell.swift */,
 				5DE2F0882A51D630003A5EC8 /* SceneDelegate.swift */,
 				5DE2F08A2A51D630003A5EC8 /* ViewController.swift */,
 				5DE2F08F2A51D632003A5EC8 /* Assets.xcassets */,

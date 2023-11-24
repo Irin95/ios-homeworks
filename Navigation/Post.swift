@@ -10,7 +10,15 @@
 
 import Foundation
 
+struct BlankPost {
+    var title: String
+}
+
 struct Post {
-    var titel: String
+    var author: String
+    var description: String
+    var image: String
+    var likes: Int
+    var views: Int
 }
 

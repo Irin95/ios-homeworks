@@ -10,8 +10,10 @@ import UIKit
 
 class FeedViewController: UIViewController {
     
-    let post = Post(titel: "мой первый пост")
-    let postTwo = Post(titel: "мой второй пост")
+//    let post = Post(titel: "мой первый пост")
+//    let postTwo = Post(titel: "мой второй пост")
+
+    
     
     private lazy var actionFirstButton: UIButton = {
         let button = UIButton()
@@ -33,18 +35,25 @@ class FeedViewController: UIViewController {
         return button
     }()
     
-    private lazy var stackView: UIStackView = {
+    private lazy var stackView: UIStackView = { //feed
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
         stack.distribution = .fillProportionally
         stack.spacing = 10
         stack.backgroundColor = .brown
+        stack.addArrangedSubview(actionFirstButton)
+        stack.addArrangedSubview(actionSecondButton)
         return stack
     }()
     
+    var post = BlankPost(title: "Первый тестовый пост")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.addSubview(stackView)
+        
         layout()
         title = "Лента"
         view.backgroundColor = .systemGray
@@ -53,14 +62,14 @@ class FeedViewController: UIViewController {
     @objc func buttonPressed(_ sender: UIButton) {
         dismiss(animated: true)
         let postViewController = PostViewController()
-        postViewController.post = self.post
+        postViewController.titelePost = post.title
         navigationController?.pushViewController(postViewController, animated: true)
     }
     
     @objc func buttonPressedTwo(_ sender: UIButton) {
         dismiss(animated: true)
         let postViewController = PostViewController()
-        postViewController.post = self.postTwo
+        postViewController.titelePost = post.title
         navigationController?.pushViewController(postViewController, animated: true)
     }
     
