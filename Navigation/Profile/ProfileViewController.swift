@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    fileprivate let data = feedPost
+    
     private lazy var profileHeaderView: ProfileHeaderView = {
         let view = ProfileHeaderView()
         view.translatesAutoresizingMaskIntoConstraints = false
