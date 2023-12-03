@@ -37,7 +37,7 @@ class ProfileHeaderView: UIView {
         let text = UITextField()
         text.translatesAutoresizingMaskIntoConstraints = false
         text.textColor = .gray
-        text.text = "Waiting for something..."
+        text.placeholder = "Waiting for something..."
         text.textAlignment = .center
         text.layer.borderWidth = 1
         text.layer.backgroundColor = UIColor.white.cgColor
